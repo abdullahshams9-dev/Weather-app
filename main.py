@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Correct way to use getenv: os.getenv('VARIABLE_NAME', 'DEFAULT_VALUE')
-API_KEY = os.getenv('WEATHER_API_KEY', 'e462fdff526172f9ea5dc84f8cf5870f') 
+API_KEY = os.getenv('WEATHER_API_KEY') 
 API_URL = "http://api.openweathermap.org/data/2.5/weather?q={}&mode=json&units=metric&appid={}"
 
 def query_api(city):
